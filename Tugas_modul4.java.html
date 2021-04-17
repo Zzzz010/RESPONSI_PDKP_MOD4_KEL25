@@ -24,7 +24,7 @@ Tugas_modul4.java</font>
 
 <span class="s0">public class </span><span class="s1">Tugas_modul4 {</span>
     <span class="s0">static int </span><span class="s1">belanjaan</span><span class="s0">;</span>
-    <span class="s0">static double </span><span class="s1">bayar</span><span class="s0">, </span><span class="s1">diskon</span><span class="s0">;</span>
+    <span class="s0">static double </span><span class="s1">lumyar</span><span class="s0">, </span><span class="s1">diskon</span><span class="s0">, </span><span class="s1">dahyar</span><span class="s0">;</span>
     <span class="s0">static boolean </span><span class="s1">isRunning = </span><span class="s0">true;</span>
     <span class="s0">static </span><span class="s1">InputStreamReader inputStreamReader = </span><span class="s0">new </span><span class="s1">InputStreamReader(System.in)</span><span class="s0">;</span>
     <span class="s0">static </span><span class="s1">BufferedReader input = </span><span class="s0">new </span><span class="s1">BufferedReader(inputStreamReader)</span><span class="s0">;</span>
@@ -61,8 +61,9 @@ Tugas_modul4.java</font>
         <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
             <span class="s1">diskon = </span><span class="s3">0</span><span class="s0">;</span>
         <span class="s1">}</span>
-        <span class="s1">bayar = belanjaan * diskon</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;Total Bayar: Rp &quot; </span><span class="s1">+ bayar)</span><span class="s0">;</span>
+        <span class="s1">lumyar = belanjaan * diskon</span><span class="s0">;</span>
+        <span class="s1">dahyar = belanjaan - lumyar</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Total Bayar: Rp &quot; </span><span class="s1">+ dahyar)</span><span class="s0">;</span>
     <span class="s1">}</span>
 
     <span class="s0">static void </span><span class="s1">nomember() {</span>
@@ -71,8 +72,9 @@ Tugas_modul4.java</font>
         <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
             <span class="s1">diskon = </span><span class="s3">0</span><span class="s0">;</span>
         <span class="s1">}</span>
-        <span class="s1">bayar = belanjaan * diskon</span><span class="s0">;</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;Total Bayar: Rp &quot; </span><span class="s1">+ bayar)</span><span class="s0">;</span>
+        <span class="s1">lumyar = belanjaan * diskon</span><span class="s0">;</span>
+        <span class="s1">dahyar = belanjaan - lumyar</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Total Bayar: Rp &quot; </span><span class="s1">+ dahyar)</span><span class="s0">;</span>
     <span class="s1">}</span>
 
     <span class="s0">public static void </span><span class="s1">main(String[] args) </span><span class="s0">throws </span><span class="s1">IOException {</span>
