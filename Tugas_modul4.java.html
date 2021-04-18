@@ -29,16 +29,39 @@ Tugas_modul4.java</font>
     <span class="s0">static </span><span class="s1">InputStreamReader inputStreamReader = </span><span class="s0">new </span><span class="s1">InputStreamReader(System.in)</span><span class="s0">;</span>
     <span class="s0">static </span><span class="s1">BufferedReader input = </span><span class="s0">new </span><span class="s1">BufferedReader(inputStreamReader)</span><span class="s0">;</span>
 
-    <span class="s0">static void </span><span class="s1">showMenu() </span><span class="s0">throws </span><span class="s1">IOException {</span>
-        <span class="s1">System.out.println(</span><span class="s2">&quot;===Menu===&quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s0">static void </span><span class="s1">menu1() </span><span class="s0">throws </span><span class="s1">IOException {</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;==========Menu==========&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;[1] Masukkan total belanja anda: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;[2] Keluar&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.print(</span><span class="s2">&quot;Pilih Menu&gt; &quot;</span><span class="s1">)</span><span class="s0">;</span>
+
+        <span class="s0">int </span><span class="s1">menu1 = Integer.parseInt(input.readLine())</span><span class="s0">;</span>
+
+        <span class="s0">switch </span><span class="s1">(menu1) {</span>
+            <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                <span class="s1">belanjamasuk()</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+            <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                <span class="s1">System.exit(</span><span class="s3">0</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s0">break;</span>
+            <span class="s0">default</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Pilihan salah!&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s0">static void </span><span class="s1">belanjamasuk() {</span>
+        <span class="s1">System.out.print(</span><span class="s2">&quot;Tolong masukkan total belanja anda: &quot;</span><span class="s1">)</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">static void </span><span class="s1">menu2() </span><span class="s0">throws </span><span class="s1">IOException {</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;==========Menu==========&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.println(</span><span class="s2">&quot;[1] Punya kartu member&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.println(</span><span class="s2">&quot;[2] Tidak punya kartu member&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.println(</span><span class="s2">&quot;[3] Keluar&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.print(</span><span class="s2">&quot;Pilih Menu&gt; &quot;</span><span class="s1">)</span><span class="s0">;</span>
 
-        <span class="s0">int </span><span class="s1">selectedMenu = Integer.parseInt(input.readLine())</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">menu2 = Integer.parseInt(input.readLine())</span><span class="s0">;</span>
 
-        <span class="s0">switch </span><span class="s1">(selectedMenu) {</span>
+        <span class="s0">switch </span><span class="s1">(menu2) {</span>
             <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
                 <span class="s1">yesmember()</span><span class="s0">;</span>
                 <span class="s0">break;</span>
@@ -84,10 +107,10 @@ Tugas_modul4.java</font>
         <span class="s1">System.out.println( </span><span class="s2">&quot;2) Raung Kawijayan - 21120120140155&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.println( </span><span class="s2">&quot;3) Anggi Nikmatun Zahra - 21120120120008&quot;</span><span class="s1">)</span><span class="s0">;</span>
         <span class="s1">System.out.println( </span><span class="s2">&quot;4) Osvelina Margaretha Siregar - 21120120140167&quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">System.out.print(</span><span class="s2">&quot;Tolong masukkan total belanja anda: &quot;</span><span class="s1">)</span><span class="s0">;</span>
-        <span class="s1">belanjaan = scan.nextInt()</span><span class="s0">;</span>
         <span class="s0">do </span><span class="s1">{</span>
-            <span class="s1">showMenu()</span><span class="s0">;</span>
+            <span class="s1">menu1()</span><span class="s0">;</span>
+            <span class="s1">belanjaan = scan.nextInt()</span><span class="s0">;</span>
+            <span class="s1">menu2()</span><span class="s0">;</span>
         <span class="s1">} </span><span class="s0">while </span><span class="s1">(isRunning)</span><span class="s0">;</span>
 
     <span class="s1">}</span>
